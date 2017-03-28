@@ -2,6 +2,8 @@ package android.coolweather.com.coolweather;
 
 import android.app.Application;
 
+import com.facebook.stetho.Stetho;
+
 import org.litepal.LitePal;
 
 /**
@@ -13,5 +15,6 @@ public class Myapplication extends Application{
     public void onCreate() {
         super.onCreate();
         LitePal.initialize(this);
+        Stetho.initializeWithDefaults(this);
     }
 }
